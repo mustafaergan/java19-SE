@@ -3,6 +3,7 @@ package com.vektorel.hayvanlar;
 public class Islem {
 	
 	public static void main(String[] args) {
+		
 		Kaplan kaplan = new Kaplan();
 		kaplan.avlan();
 		kaplan.takipEt();
