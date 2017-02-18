@@ -25,7 +25,6 @@ public class MyMap {
 	}
 	
 	
-	
 	public void verileriGoster(Map<Integer,String> map){
 		
 		for(Entry<Integer, String> veri : map.entrySet()){
