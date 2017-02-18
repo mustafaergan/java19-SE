@@ -22,8 +22,9 @@ public class MyMap {
 			myMap.put(key, value);
 		}
 		return myMap;
-		
 	}
+	
+	
 	
 	public void verileriGoster(Map<Integer,String> map){
 		
