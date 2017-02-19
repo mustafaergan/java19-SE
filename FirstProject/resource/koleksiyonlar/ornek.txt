@@ -1,0 +1,24 @@
+Person.class
+	cons(tc,isim,soyad,dogumyeri)
+		this.
+		
+	TC
+	Isim
+	Soyad
+	DogumYeri
+----------------------
+
+Veritabani.class
+	dosyalariCek - C:\kisiler
+	Map<String(dosyaismi),Person> myMap = HaspMap<String,Person>();
+	for(dosyaList){
+		personNesnesi = dosyadakiVerileriOku(dosya)
+		myMap.put(dosyaismi,personNesnesi)
+	}
+
+Islem.class
+	main()
+		new veritabani yap
+		veritabni.dosyacek(path)
+	
+		

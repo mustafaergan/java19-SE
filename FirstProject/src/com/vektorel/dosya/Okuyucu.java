@@ -8,8 +8,12 @@ public class Okuyucu {
 	Scanner oku;
 	public void dosyaAc(){
 		try {
+			File file = new File("c:/kisi/mmyazici.txt");
+//			file.isDirectory()
+//			file.listFiles()
 			this.oku = new Scanner
-			(new File("c:/kisi/mmyazici.txt"));
+			(file);
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

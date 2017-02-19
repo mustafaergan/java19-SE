@@ -7,6 +7,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author burak.kilinc
+ * @category mustafa.ergan vektorel java 19
+ *
+ */
 public class MyMap {
 	
 	Scanner scan = new Scanner(System.in);

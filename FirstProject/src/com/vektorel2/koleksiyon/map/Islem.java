@@ -1,7 +1,7 @@
 package com.vektorel2.koleksiyon.map;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Islem {
 	
@@ -20,9 +20,26 @@ public class Islem {
 //		
 //		System.out.println(myMap.get(null));
 		
-		
 		MyMap map = new MyMap();
-		map.verileriGoster(map.veridoldur());
+		Map<Integer,String> doluMap = map.veridoldur();
+		map.verileriGoster(doluMap);
+		
+		for(Entry en : doluMap.entrySet()){
+			if(en.getValue().equals("ahmet"))
+				en.setValue("mehmet");
+		}
+		
+		System.out.println(doluMap);
+		
+		doluMap.put(1, "mahmut");
+		
+		System.out.println(doluMap);
+		
+//		doluMap.put("1","hasan")
+		
+		
+		
+		
 		
 	}
 
