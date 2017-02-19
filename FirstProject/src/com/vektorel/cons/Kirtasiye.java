@@ -1,7 +1,7 @@
 package com.vektorel.cons;
 
 import com.vektorel.cons.pro.Fotokopi;
-import com.vektorel.publicdeneme.Kagit;
+import com.vektorel.publicdenemee.Kagit;
 
 public class Kirtasiye {
 		
