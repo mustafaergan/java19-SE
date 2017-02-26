@@ -8,18 +8,29 @@ public class Islem {
 		Thread isParcacigi1 = new Thread(sayi1);
 		Thread isParcacigi2 = new Thread(sayi2);
 		
+		Thread isParcacigi3 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+			}
+		});
+		
 		isParcacigi1.start();
 		isParcacigi2.start();
 		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		synchronized (isParcacigi1) {
+			
+			try {
+				isParcacigi1.wait();
+				System.out.println("*-----*");
+				
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 		
-		isParcacigi1.interrupt();
-		
-		isParcacigi1.interrupt();
+		System.out.println("-----");
 	}
 
 }
