@@ -31,6 +31,14 @@ public class Islem {
 		paneller.setSize(200,200);
 		paneller.setVisible(true);
 		
+		Paneller2 paneller2 = new Paneller2();
+		paneller2.setSize(400,400);
+		paneller2.setVisible(true);
+		
+		Ikon icon = new Ikon();
+		icon.setSize(200,200);
+		icon.setVisible(true);
+		
 		
 	}
 	

@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class Paneller extends JFrame {
@@ -22,6 +23,8 @@ public class Paneller extends JFrame {
 		
 		jPanelButtonlar.add(new JButton("1"));
 		jPanelButtonlar.add(new JButton("2"));
+		
+		
 		
 		merkezi.add(jPanelButtonlar,BorderLayout.NORTH);
 		
