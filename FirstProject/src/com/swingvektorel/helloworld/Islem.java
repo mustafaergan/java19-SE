@@ -31,6 +31,9 @@ public class Islem {
 		
 		jFrame.add(button);
 		
+		jFrame.add(new JButton("dene"));
+
+		
 		jFrame.setLocationRelativeTo(null);
 		
 		jFrame.setVisible(true);

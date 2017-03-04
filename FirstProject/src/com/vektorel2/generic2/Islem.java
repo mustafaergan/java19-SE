@@ -1,5 +1,7 @@
 package com.vektorel2.generic2;
 
+import com.vektorel2.enums.EAnkaraninIlceleri;
+
 public class Islem {
 
 	public static void main(String[] args) {
@@ -12,6 +14,8 @@ public class Islem {
 		System.out.println((nesnem.getE()*2));
 		
 		nesnem.carp();
+		
+		EAnkaraninIlceleri.CANKAYA.getValue();
 		
 	}
 	
