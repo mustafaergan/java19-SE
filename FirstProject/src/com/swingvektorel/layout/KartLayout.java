@@ -25,7 +25,9 @@ public class KartLayout extends JFrame{
 
 		setLayout(new BorderLayout());
 		
-//		setVisible(true);
+		anaGovdeOlustur();
+		jPanelLoginDoldur();
+		jPanelShowMessageDoldur();
 	}
 	
 	public void anaGovdeOlustur(){
