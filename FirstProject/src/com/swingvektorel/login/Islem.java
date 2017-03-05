@@ -6,6 +6,8 @@ public class Islem {
 		KartLayout kartLayout = new KartLayout();
 		
 		kartLayout.setVisible(true);
+		
+		String s = "";
 	}
 	
 }
