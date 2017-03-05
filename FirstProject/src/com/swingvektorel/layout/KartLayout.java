@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,23 +15,37 @@ import javax.swing.JTextField;
 
 public class KartLayout extends JFrame{
 
+	CardLayout cardLayout;
+	JPanel jPanelAna;
+	JPanel jPanelLogin;
+	JPanel jPanelShowMessage;
+	
 	public KartLayout(){
 		setSize(400,400);
 
 		setLayout(new BorderLayout());
 		
-		CardLayout cardLayout = new CardLayout();
-		
-		JPanel jPanelAna = new JPanel(cardLayout);
-		
-		JPanel jPanelLogin = new JPanel(new GridLayout(3, 3));
+//		setVisible(true);
+	}
 	
-		JPanel jPanelShowMessage = new JPanel(new FlowLayout());
+	public void anaGovdeOlustur(){
+		cardLayout = new CardLayout();
+		
+		jPanelAna = new JPanel(cardLayout);
+		
+		jPanelLogin = new JPanel(new GridLayout(3, 3));
+	
+		jPanelShowMessage = new JPanel(new FlowLayout());
 		
 		jPanelAna.add(jPanelLogin,"login");
 		
 		jPanelAna.add(jPanelShowMessage,"message");
 		
+		add(jPanelAna,BorderLayout.CENTER);
+
+	}
+	
+	public void jPanelLoginDoldur(){
 		JTextField jTextFieldAd = new JTextField(20);
 		JTextField jTextFieldSifre = new JTextField(20);
 		
@@ -42,11 +58,21 @@ public class KartLayout extends JFrame{
 		jPanelLogin.add(new JLabel(""));
 		jPanelLogin.add(jButton);
 		
+		jButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cardLayout.show(jPanelAna, "message");
+			}
+		});
+		
+	}
+	
+	public void jPanelShowMessageDoldur(){
+		
 		JLabel jLabelKarsilama = new JLabel("Hoþ Geldin");
 		
 		jPanelShowMessage.add(jLabelKarsilama);
-		
-		setVisible(true);
 	}
 	
 	
