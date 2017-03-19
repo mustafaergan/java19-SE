@@ -26,4 +26,14 @@ public enum ConnectionEnum {
 		return value;
 	}
 	
+	public String dbConnection(){
+		String value = ConnectionEnum.JDBC_POSTGRESQL.getValue()
+		+ConnectionEnum.HOST.getValue()
+		+":"+
+		ConnectionEnum.PORT.getValue()
+		+ "/"
+		+ConnectionEnum.DBNAME.getValue();
+		return value;
+	}
+	
 }
