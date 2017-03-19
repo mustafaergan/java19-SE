@@ -17,7 +17,7 @@ public class Islem {
 		try {
 			Connection connection = DriverManager
 					.getConnection(
-							ConnectionEnum.DBNAME.dbConnection()
+							ConnectionEnum.dbConnection()
 							,ConnectionEnum.USERNAME.getValue()
 							,ConnectionEnum.PASSWORD.getValue());
 			
