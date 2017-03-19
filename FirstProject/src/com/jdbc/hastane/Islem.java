@@ -17,12 +17,7 @@ public class Islem {
 		try {
 			Connection connection = DriverManager
 					.getConnection(
-							ConnectionEnum.JDBC_POSTGRESQL.getValue()
-							+ConnectionEnum.HOST.getValue()
-							+":"+
-							ConnectionEnum.PORT.getValue()
-							+ "/"
-							+ConnectionEnum.DBNAME.getValue()
+							ConnectionEnum.DBNAME.dbConnection()
 							,ConnectionEnum.USERNAME.getValue()
 							,ConnectionEnum.PASSWORD.getValue());
 			
