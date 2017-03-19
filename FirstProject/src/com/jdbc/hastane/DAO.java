@@ -45,7 +45,6 @@ public class DAO {
 			if(!statement.execute(SQL)){
 				System.out.println("iþlemi yaptým");
 			}
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
