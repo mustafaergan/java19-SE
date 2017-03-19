@@ -39,5 +39,17 @@ public class DAO {
 		}
 	}
 	
+	public void calistir(String SQL){
+		try {
+			statement = connection.createStatement();
+			if(!statement.execute(SQL)){
+				System.out.println("iþlemi yaptým");
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 }
