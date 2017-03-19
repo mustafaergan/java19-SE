@@ -25,23 +25,32 @@ public class Islem {
 							,ConnectionEnum.USERNAME.getValue()
 							,ConnectionEnum.PASSWORD.getValue());
 			
-			String SQL = "select * from hastane";
+			String SQL1 = "select * from hastane";
 			
 			Statement statement = connection.createStatement();
 			
-			ResultSet rs = statement.executeQuery(SQL);
+			ResultSet rs = statement.executeQuery(SQL1);
 			
 			while(rs.next()){
 				System.out.println(rs.getString("isim"));
 			}
+			
+			String SQL2 = "insert into hastane (isim) values ('dýþ kapý')";
+			
+			if(statement.executeUpdate(SQL2)>0)
+				System.out.println("verileri eklendi");
+			
+			rs = statement.executeQuery(SQL1);
+			
+			while(rs.next()){
+				System.out.println(rs.getString("isim"));
+			}
+			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 				   
-
-
 	}
-
 }
