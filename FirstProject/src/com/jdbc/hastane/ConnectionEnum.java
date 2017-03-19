@@ -26,7 +26,7 @@ public enum ConnectionEnum {
 		return value;
 	}
 	
-	public String dbConnection(){
+	static String dbConnection(){
 		String value = ConnectionEnum.JDBC_POSTGRESQL.getValue()
 		+ConnectionEnum.HOST.getValue()
 		+":"+
