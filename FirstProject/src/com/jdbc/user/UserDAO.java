@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.jdbc.entity.User;
+
 public class UserDAO {
 
 	Connection connection;
@@ -28,7 +30,31 @@ public class UserDAO {
 
 
 	public boolean isUserControl(String username, String password) {
-		return false;
+		User user = null;
+		String SQL = "Select * from login where user_name = ? and password = ?";
+		
+		try {
+			statement = connection.prepareStatement(SQL);
+			
+			statement.setString(1, username);
+			statement.setString(2, password);
+			
+			
+			ResultSet rs = statement.executeQuery();
+			
+			while (rs.next()) {
+				user = new User(rs.getInt("id"),
+						rs.getString("user_name"), rs.getString("password"));
+				
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return (user != null);
 	}
 	
 	

@@ -8,7 +8,10 @@ public class Islem {
 		
 		DAO dao = new DAO();
 		
-		Hastane hastane = dao.getHastane(8);
+		Hastane hastane = dao.getHastane(10);
+		
+		System.out.println(hastane.getId());
+		System.out.println(hastane.getIsim());
 		
 		
 	}
