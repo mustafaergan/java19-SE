@@ -2,6 +2,7 @@ package com.jdbc.hastane2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,6 +13,7 @@ public class DAO {
 
 	Connection connection;
 	Statement statement;
+	PreparedStatement preparedStatement;
 	
 	
 	public DAO(){
@@ -54,11 +56,13 @@ public class DAO {
 	
 	public Hastane getHastane(int id){
 		Hastane hastane = new Hastane();
-		String SQL = "Select * from HASTANE where id = 8";
+		String SQL = "Select * from HASTANE where id = ?";
 		try {
-			statement =  connection.createStatement();
+//			statement =  connection.createStatement();
+			preparedStatement = connection.prepareStatement(SQL);
+			preparedStatement.setInt(1, id);
 			
-			ResultSet rs = statement.executeQuery(SQL);
+			ResultSet rs = preparedStatement.executeQuery();
 			
 			while(rs.next()){
 				int idSQL = rs.getInt("id");
