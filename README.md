@@ -30,7 +30,7 @@ temelleri, koleksiyonlar, dosya işlemleri, iş parçacıkları, Swing arayüzle
 
 - Java 8 (pom dosyalarındaki derleyici ayarı)
 - Maven, `maven-compiler-plugin` 3.5.1
-- PostgreSQL JDBC sürücüsü (`FirstProject`: 42.0.0, `maven`: 9.1-901-1.jdbc4), JUnit 3.8.1
+- PostgreSQL JDBC sürücüsü (`FirstProject`: 42.2.28, `maven`: 9.1-901-1.jdbc4), JUnit 3.8.1
 
 ## Çalıştırma
 
